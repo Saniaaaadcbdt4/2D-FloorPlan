@@ -1,0 +1,123 @@
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to bottom, #6495ED, #cccccc);
+    height: 100vh;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+}
+
+#floorplan-container {
+    position: relative;
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 40vw;
+    height: 50vh;
+    background-color: #efdddd;
+    border: 2px solid rgb(9, 150, 145);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#controls {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-70%);
+    margin-top: 20px;
+}
+
+#controls button {
+    background-color: rgb(9, 150, 145);
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: grey;
+}
+
+#zoom-slider {
+    margin: 0 auto;
+    display: block;
+    accent-color: rgb(9, 150, 145);
+}
+
+.Floor-info {
+    position: absolute;
+    top: 80px; 
+    right: 40px; 
+    width: 350px; 
+    max-width: 100%;
+    height: auto; 
+    padding: 15px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 10; 
+}
+
+.Floor-info h1 {
+    color: #160239;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+#para{
+    color: #020c1f;
+    font-weight: 700;
+    margin: 20px 0;
+}
+#para2{
+    color: #020c1f;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+@media (max-width: 768px) {
+    .Floor-info {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    #controls {
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    #controls button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+.region, .door, .furniture {
+    transition: all 0.3s ease;
+}
+
+.furniture:hover {
+    transform: scale(1.05);
+    background-color: #339;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+    font-size: 12px;
+}

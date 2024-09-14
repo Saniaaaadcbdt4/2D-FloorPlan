@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Floorplan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="floorplan-container"></div> 
+        
+        <div id="controls">
+            <input type="range" id="zoom-slider" min="0.5" max="2" step="0.1" value="0.8">
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+            <button id="reset-view">Reset View</button>
+            <button id="save-state">Save State</button>
+            <button id="load-state">Load State</button>
+           
+        </div>
+        <div class="Floor-info">
+            <h1>2D Floorplan</h1>
+            <p id="para">This interactive 2D floorplan viewer displays walls, doors, and furniture, with features for zooming, navigation, and hover details.</p>
+            <p id="para2">You have zoom-in, zoom-out, save and load options on the right end.  Feel free to interact with any option!</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
